@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 {
 	char	*buffer; //contenedor grande que almacena todo lo leído
 	char	c; // variable temporal que almacena el carácter leído por read
-	char	r; // resultado de read: 1(ok), 0(EOF), -1(ERROR)
+	int		r; // resultado de read: 1(ok), 0(EOF), -1(ERROR)
 	int		i; // variable para leer y luego para escribir
 	int		len; // longitud del argumento (patrón a buscar)
 
