@@ -1,0 +1,5 @@
+Hola mundo
+Esta es una prueba
+Última línea sin salto
+
+Por lo general minishell muy completo, pese a los fallos, (que se notan que estan por las prisas de pushear), los comandos estan muy cuidados, la gestion de errores muy avanzada, hay casos gestionados que nisiquiera conocia. Enhorabuena por el proyecto, en cuanto este limpio y entregado vais a poder estar orgullos@s! Detalles que arreglar: - Ojo con el wildcard en el Makefile - Ojo con el Makefile que no recompila al modificar minishell.h - Comando con solo espacios o tabulaciones lo interpreta como argumentos nulos - Valor de retorno de los comandos del PATH erroneos = 0 siempre - Los signals no cambian el valor de retorno. Tiene que funcionar en ejecucion y en interactivo. - Cuidado con las expansiones de $ (echo $) - "echo hola > paco" crea el archivo paco pero no pone hola dentro - redirecciones en general no funcionan - Urandom revela algun leak, pero complicado encontrarlo organicamente
