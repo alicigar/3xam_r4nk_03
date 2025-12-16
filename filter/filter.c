@@ -20,9 +20,9 @@ int	main(int argc, char **argv)
 {
 	char	*buffer; //contenedor grande que almacena todo lo leído
 	char	c; // variable temporal que almacena el carácter leído por read
-	char	r; // resultado de read
+	char	r; // resultado de read: 1(ok), 0(EOF), -1(ERROR)
 	int		i; // variable para leer y luego para escribir
-	int		len; // longitud del argumento
+	int		len; // longitud del argumento (patrón a buscar)
 
 	if (argc != 2 || argv[1][0] == '\0')
 		return (1);
@@ -53,7 +53,6 @@ int	main(int argc, char **argv)
 	{
 		if (ft_strncmp(&buffer[i], argv[1], len))
 		{
-			int	y = 0; // y es el contador para imprimir *
 			while (y < len)
 			{
 				write(1, "*", 1);
