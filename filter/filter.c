@@ -53,6 +53,7 @@ int	main(int argc, char **argv)
 	{
 		if (ft_strncmp(&buffer[i], argv[1], len))
 		{
+			int	y = 0;
 			while (y < len)
 			{
 				write(1, "*", 1);
