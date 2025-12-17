@@ -1,10 +1,10 @@
-#include <unistd.h> //añade todas las bibliotecas del .h
+#include <unistd.h> //añade todas las bibliotecas
 #include <stdlib.h>
 
-#ifndef BUFFER_SIZE  //añade esto también
+#ifndef BUFFER_SIZE  //añade esto también del .h
 # define BUFFER_SIZE 10
 #endif
-
+//tabula bien todo, pon los return entre paréntesis, separa los while del paréntesis
 char *ft_strchr(char *s, int c)
 {
     int i = 0;
@@ -80,7 +80,6 @@ char *get_next_line(int fd)
     static char b[BUFFER_SIZE + 1] = "";
     char *ret = NULL;
     char *tmp = ft_strchr(b, '\n');
-    /*int read_ret;*/
 
     while (!tmp)
     {
@@ -110,7 +109,7 @@ char *get_next_line(int fd)
     return (ret);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <fcntl.h>
 #include <stdlib.h>
 
@@ -132,4 +131,4 @@ int main(void)
 
     close(fd);
     return 0;
-}
+}*/
