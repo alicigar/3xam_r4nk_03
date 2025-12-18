@@ -28,13 +28,13 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 
 size_t ft_strlen(char *s)
 {
-  size_t res = 0;
+  size_t ret = 0;
   while (*s)
   {
     s++;
-    res++;
+    ret++;
   }
-  return res;
+  return ret;
 }
 
 int str_append_mem(char **s1, char *s2, size_t size2)
@@ -59,7 +59,7 @@ int str_append_str(char **s1, char *s2)
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
   if (dest > src)
-    return ft_memmove(dest, src, n);
+    return ft_strcpy(dest, src, n);
   else if (dest == src)
     return dest;
   size_t i = ft_strlen((char *)src) - 1;
